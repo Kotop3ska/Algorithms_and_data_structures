@@ -71,7 +71,7 @@ class BinarySearchTree:
                 return node.right
             elif node.right is None:
                 return node.left
-            max_node = self._max_node(ode.left)
+            max_node = self._max_node(node.left)
             node.data = max_node.data
             node.left = self._delete(node.left, max_node.data)
         return node
